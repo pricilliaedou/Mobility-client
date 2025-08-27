@@ -1,7 +1,11 @@
 * {
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "outfit", "sans-serif";
   color: #3b3b3b;
+}
+:root {
+  --primary-color: #3b3b3b;
+  --secondary-color: #379eb7;
 }
 body {
   height: 100%;
@@ -10,15 +14,34 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 16px;
+  text-align: justify;
 }
 a {
   text-decoration: none;
-  color: #3b3b3b;
+  color: var(--secondary-color);
 }
 h1,
 h2 {
   padding-top: 40px;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
 }
+h1 {
+  font-size: 2rem;
+  animation: slideIn 1s ease-out forwards;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.2rem;
+
+  font-weight: 500;
+  text-decoration: solid underline;
+  margin: 20px 0 10px 0;
+}
+/*HEADER*/
 
 .header {
   position: fixed;
@@ -29,11 +52,11 @@ h2 {
   z-index: 1000;
   background: #379eb7;
   box-shadow: #b0b0b1 0px 4px 8px;
+  border-radius: 0 0 10px 10px;
 }
 .header a {
   color: #fff;
   font-weight: bold;
-  font-size: 1.1rem;
 }
 .header-inner {
   max-width: 1400px;
@@ -60,9 +83,12 @@ h2 {
   display: flex;
   gap: 15px;
 }
-main > p {
-  margin-bottom: 10px;
+
+.title {
+  text-align: center;
 }
+
+/*PARALLAX*/
 .parallax {
   background-image: url("/assets/images/recharge.png");
   height: 100vh;
@@ -75,13 +101,20 @@ main > p {
   perspective: 1px;
   transform-style: preserve-3d;
 }
+
 .img_width {
   max-width: 100%;
   margin: 10px 0;
 }
 
+/*MAIN*/
 main {
   padding-top: 35px;
+}
+
+main > p {
+  margin-bottom: 10px;
+  animation: fadeIn 3s ease-out forwards;
 }
 section {
   box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.25),
@@ -153,12 +186,32 @@ section {
   background-image: none;
 }
 
+/*ANIMATIONS*/
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*Responsive*/
 
 @media (max-width: 600px) {
   .parallax {
-    background-size: cover;
-    height: 60vh;
+    background-size: contain;
+    height: 50vh;
     width: 100%;
   }
 }
