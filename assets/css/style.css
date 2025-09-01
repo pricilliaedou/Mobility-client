@@ -129,10 +129,10 @@ section {
 #myjoulebox,
 #demo,
 #techno {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
-  padding: 0 16px;
+  padding: 16px;
 }
 
 #myjoulebox {
@@ -261,10 +261,8 @@ svg {
 
 /*Responsive*/
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .parallax {
-    background-size: contain;
-    height: 50vh;
-    width: 100%;
+    display: none;
   }
 }
