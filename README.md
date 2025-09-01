@@ -1,6 +1,6 @@
 ## Maquettes
 
-![Acceuil](./assets/maquettes/accueil.png)
-![Wallet](./assets/maquettes/wallet.png)
-![Recharges](./assets/maquettes/recharges.png)
-![Profil](./assets/maquettes/Profil.png)
+<img src="./assets/maquettes/accueil.png" alt="maquette de la page d'accueil" width="200"/>
+<img src="./assets/maquettes/wallet.png" alt="maquette de la page wallet" width="200"/>
+<img src="./assets/maquettes/recharges.png" alt="maquette de la page recharges" width="200"/>
+<img src="./assets/maquettes/Profil.png.png" alt="maquette de la page profil" width="200"/>
