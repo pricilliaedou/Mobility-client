@@ -13,7 +13,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   }
 });
-observer.observe(document.querySelector("#myjoulebox"));
+observer.observe(document.querySelector("#application"));
 observer.observe(document.querySelector("#demo"));
 observer.observe(document.querySelector("#techno"));
 // observer.disconnect();

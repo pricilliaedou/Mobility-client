@@ -20,23 +20,28 @@ a {
   text-decoration: none;
   color: var(--secondary-color);
 }
+ul {
+  list-style: disc;
+  padding-left: 16px;
+}
+
 h1,
 h2 {
-  padding-top: 40px;
-  margin-bottom: 30px;
   color: var(--secondary-color);
 }
 h1 {
   font-size: 2rem;
   animation: slideIn 1s ease-out forwards;
+  padding-top: 40px;
+  margin-bottom: 30px;
 }
 
 h2 {
   font-size: 1.5rem;
+  padding-top: 30px;
 }
 h3 {
   font-size: 1.2rem;
-
   font-weight: 500;
   text-decoration: solid underline;
   margin: 20px 0 10px 0;
@@ -126,16 +131,15 @@ section {
   padding: 0 16px;
 }
 
-#myjoulebox,
+#application,
 #demo,
 #techno {
-  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   padding: 16px;
 }
 
-#myjoulebox {
+#application {
   display: flex;
   flex-direction: column;
 }
@@ -210,7 +214,7 @@ section {
   animation: carousel 10s linear infinite;
   flex-wrap: nowrap;
   gap: 15px;
-  width: cal(5 * 260px);
+  width: calc(5 * 260px);
 }
 .card {
   background-color: white;
