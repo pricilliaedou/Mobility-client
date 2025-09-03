@@ -56,7 +56,17 @@ L’application permet aux utilisateurs de :
 
 <p>
   <img src="./assets/maquettes/accueil.png" alt="Accueil" width="200" />
+  <img src="./assets/maquettes/modal_station.png" alt="Détail de la station via la modal" width="200" />
+  <img src="./assets/maquettes/details_station.png" alt="Informations sur la station" width="200" />
+  <img src="./assets/maquettes/paiement_recharge_kkiapay.png" alt="Paiement de session de recharge via kkiapay" width="200" />
   <img src="./assets/maquettes/wallet.png" alt="Wallet" width="200" />
+  <img src="./assets/maquettes/ajout_credit_via_coupon.png" alt="Ajout du crédit via un coupon" width="200" />
+  <img src="./assets/maquettes/confirmation_recharge_wallet.png" alt="Confirmation de recharge wallet" width="200" />
   <img src="./assets/maquettes/recharges.png" alt="Recharges" width="200" />
+  <img src="./assets/maquettes/single_recharge.png" alt="Détail d'une recharge" width="200" />
   <img src="./assets/maquettes/Profil.png" alt="Profil" width="200" />
+  <img src="./assets/maquettes/formulaire_inscription.png" alt="Formulaire inscription" width="200" />
+  <img src="./assets/maquettes/modification_mot_de_passe.png" alt="Modification du mot de passe" width="200" />
+  <img src="./assets/maquettes/codes_prepaiement.png" alt="Liste des codes de prépaiement" width="200" />
+  <img src="./assets/maquettes/assistance_station.png" alt="Demander de l'assistance via l'identification d'une station" width="200" />
 </p>
