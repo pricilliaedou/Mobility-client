@@ -137,6 +137,16 @@ section {
   display: flex;
   flex-direction: column;
   padding: 16px;
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition: opacity 1.2s ease, transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#application.visible,
+#demo.visible,
+#techno.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 #application {
@@ -156,6 +166,7 @@ section {
   align-items: center;
   overflow: hidden;
 }
+
 .swiper {
   width: 100%;
   padding: 50px 0;

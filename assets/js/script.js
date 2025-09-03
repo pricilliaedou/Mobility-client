@@ -1,22 +1,35 @@
 //Intersection Observer
-const observer = new IntersectionObserver((entries) => {
-  for (const entry of entries) {
-    if (entry.isIntersecting) {
-      entry.target.animate(
-        [
-          { transform: "translateX(-100px)", opacity: 0 },
-          { transform: "translateX(0)", opacity: 1 },
-        ],
-        { duration: 500, fill: "forwards" }
-      );
-      // observer.unobserve(entry.target);
-    }
+(() => {
+  const targets = document.querySelectorAll("#application, #demo, #techno");
+  if (!targets.length) return;
+
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+  if (reduceMotion) {
+    targets.forEach((el) => el.classList.add("visible"));
+    return;
   }
-});
-observer.observe(document.querySelector("#application"));
-observer.observe(document.querySelector("#demo"));
-observer.observe(document.querySelector("#techno"));
-// observer.disconnect();
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    },
+    {
+      root: null,
+      rootMargin: "0px 0px -15% 0px",
+      threshold: 0.15,
+    }
+  );
+
+  targets.forEach((el) => observer.observe(el));
+})();
 
 //Diapo
 let swiper = new Swiper(".swiper", {
