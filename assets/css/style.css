@@ -7,6 +7,9 @@
   --primary-color: #3b3b3b;
   --secondary-color: #379eb7;
 }
+strong {
+  font-weight: bold;
+}
 body {
   height: 100%;
 }
