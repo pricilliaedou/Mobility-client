@@ -10,25 +10,30 @@
     targets.forEach((el) => el.classList.add("visible"));
     return;
   }
+  const showRatio = 0.35;
+  const hideWhenNotIntersecting = true;
+
+  const thresholds = Array.from({ length: 101 }, (_, i) => i / 100);
 
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry) => {
+      for (const entry of entries)
         if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        } else {
+          if (entry.intersectionRatio >= showRatio) {
+            entry.target.classList.add("visible");
+          }
+        } else if (hideWhenNotIntersecting) {
           entry.target.classList.remove("visible");
         }
-      });
     },
     {
       root: null,
-      rootMargin: "0px 0px -15% 0px",
-      threshold: 0.15,
+      rootMargin: "-10px 0px -10% 0px",
+      threshold: thresholds,
     }
   );
 
-  targets.forEach((el) => observer.observe(el));
+  targets.forEach((t) => observer.observe(t));
 })();
 
 //Diapo
